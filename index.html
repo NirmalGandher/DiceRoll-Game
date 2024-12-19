@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Dice Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Roll Dice Game</h1>
+    
+    <div>
+        <input type="text" id="player1-name" placeholder="Enter Player 1 Name" />
+        <input type="text" id="player2-name" placeholder="Enter Player 2 Name" />
+        <button onclick="startGame()" class="start">Start Game</button>
+    </div>
+    
+    <button onclick="roll()" class="roll" id="roll-btn" disabled>Roll Dice</button>
+    <button onclick="resetGame()" class="reset" id="reset-btn" disabled>Reset Game</button>
+    
+    <div id="result">
+        <div id="player1" class="player-result">
+            <h3 id="player1-display">Player 1</h3>
+            <div id="player1-result"></div>
+            <div class="score" id="player1-score">Score: 0</div>
+        </div>
+        <div id="player2" class="player-result">
+            <h3 id="player2-display">Player 2</h3>
+            <div id="player2-result"></div>
+            <div class="score" id="player2-score">Score: 0</div>
+        </div>
+    </div>
+    <div id="winner"></div>
+
+    <!-- Sound Effects -->
+    <audio id="roll-sound" src="sounds/dice-roll.mp3"></audio>
+    <audio id="win-sound" src="sounds/win.mp3"></audio>
+    <audio id="loss-sound" src="sounds/loss.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
